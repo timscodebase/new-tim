@@ -1,0 +1,19 @@
+.link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  color: var(--purple);
+  /* font-weight: bolder; */
+  text-transform: uppercase;
+  background: var(--bluetoyellow);
+  border: 0;
+  outline: none;
+  border-bottom: 2px solid var(--purple);
+  font-size: 1.5rem;
+}
+
+.link:nth-child(even) {
+  flex-direction: row-reverse;
+  background: var(--yellowtoblue);
+}
