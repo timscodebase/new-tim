@@ -1,11 +1,16 @@
 :root {
+  /* Colors */
   --black: #111;
   --white: #efe;
   --red: rgba(255, 90, 73, 1);
   --purple: rgba(255, 0, 142, 1);
   --yellow: rgba(255, 248, 0, 1);
   --blue: rgba(0, 243, 255, 1);
+  --darkBlue: rgb(0, 104, 189);
   --orange: rgb(255, 217, 0);
+
+  /* Variables */
+  --padding: 2rem;
 
   /* Gradients */
   --bluetoyellow: linear-gradient(135deg, var(--blue) 0%, var(--yellow) 100%);

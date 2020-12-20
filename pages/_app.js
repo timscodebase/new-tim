@@ -1,7 +1,7 @@
-import Footer from '../comonents/Footer';
-import Header from '../comonents/Header';
+import Footer from '../components/Footer'
+import Header from '../components/Header'
 
-import '../styles/globals.css';
+import '../styles/globals.css'
 
 export default function MyApp({ Component, pageProps }) {
   return (
@@ -10,5 +10,5 @@ export default function MyApp({ Component, pageProps }) {
       <Component {...pageProps} />
       <Footer />
     </>
-  );
+  )
 }

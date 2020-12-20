@@ -1,0 +1,19 @@
+.label {
+  display: flex;
+  justify-content: space-between;
+  color: var(--white);
+  padding: 0.5rem;
+}
+
+.input,
+.textarea {
+  width: 65%;
+}
+
+.submit {
+  width: 100%;
+  background: var(--yellowtopurple);
+  border: 0;
+  outline: 0;
+  padding: 0.5rem;
+}

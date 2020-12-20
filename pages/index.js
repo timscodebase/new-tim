@@ -1,12 +1,15 @@
-import Head from 'next/head';
-import Nav from '../comonents/Nav/Nav';
-import styles from '../styles/Home.module.css';
+import About from '../components/About'
+import Nav from '../components/Nav'
+import Separator from '../components/Separator'
 
 export default function Home() {
   return (
     <>
+      <Separator />
+      <About />
+      <Separator />
       <Nav />
-      <p>hi</p>
+      <Separator />
     </>
-  );
+  )
 }

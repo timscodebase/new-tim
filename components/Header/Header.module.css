@@ -1,5 +1,5 @@
 .header {
-  padding: 2rem;
+  padding: var(--padding);
   background: rgb(255, 248, 0);
   background: var(--yellowtopurple);
 }

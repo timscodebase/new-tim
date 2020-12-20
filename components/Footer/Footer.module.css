@@ -1,0 +1,8 @@
+.footer {
+  padding: var(--padding);
+  padding-top: 1rem;
+}
+
+.footer h3 {
+  color: var(--purple);
+}
