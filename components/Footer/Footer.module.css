@@ -3,6 +3,23 @@
   padding-top: 1rem;
 }
 
+.footer a {
+  color: var(--red);
+}
+
 .footer h3 {
   color: var(--purple);
+}
+
+.socialLinks {
+  display: flex;
+  justify-content: space-between;
+  font-size: 2rem;
+  padding: 1rem 0;
+}
+
+.signOff {
+  color: var(--white);
+  padding: 1rem 0;
+  text-align: center;
 }

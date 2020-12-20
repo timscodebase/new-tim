@@ -31,7 +31,7 @@ class ContactForm extends React.Component {
   render() {
     const { name, email, message } = this.state
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form className={styles.form} onSubmit={this.handleSubmit}>
         <p>
           <label className={styles.label} htmlFor="name">
             Your Name:{' '}
