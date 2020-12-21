@@ -2,21 +2,23 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCodepen, faDev, faGithub } from '@fortawesome/free-brands-svg-icons'
 import Separator from '../Separator'
 
-import styles from './Header.module.css'
+import styles from './SecondaryHeader.module.css'
 
-export default function Header() {
+export default function SecondaryHeader() {
   return (
     <>
-      <header className={styles.header}>
-        <h1 className={styles.h1}>Tim Smith</h1>
-        <div className={styles.carousel}>
-          <div className={styles.inner}>
-            <div className={styles.element}>Web Developer</div>
-            <div className={styles.element}>Photographer</div>
-            <div className={styles.element}>Writer</div>
-            <div className={styles.element}>Artist</div>
+      <header className={styles.secondaryHeader}>
+        <section>
+          <h1 className={styles.h1}>Tim Smith</h1>
+          <div className={styles.carousel}>
+            <div className={styles.inner}>
+              <div className={styles.element}>Web Developer</div>
+              <div className={styles.element}>Photographer</div>
+              <div className={styles.element}>Writer</div>
+              <div className={styles.element}>Artist</div>
+            </div>
           </div>
-        </div>
+        </section>
         <div className={styles.socialIcons}>
           <a
             href="https://codepen.io/WebRuin"

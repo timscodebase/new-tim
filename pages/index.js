@@ -5,7 +5,6 @@ import Separator from '../components/Separator'
 export default function Home() {
   return (
     <>
-      <Separator />
       <About />
       <Separator />
       <Nav />
