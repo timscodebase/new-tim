@@ -21,6 +21,11 @@
     var(--yellow) 0%,
     var(--purple) 100%
   );
+  --purpletoyellow: linear-gradient(
+    135deg,
+    var(--purple) 0%,
+    var(--yellow) 100%
+  );
 }
 
 body {

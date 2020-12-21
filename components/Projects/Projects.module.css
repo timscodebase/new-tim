@@ -1,0 +1,23 @@
+.projectsWrapper {
+  padding: 0.5rem var(--padding) 1rem var(--padding);
+}
+
+.projectsWrapper h1 {
+  font-size: 3rem;
+  background: var(--purpletoyellow);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.projects {
+  display: grid;
+  grid-gap: 0.5rem;
+  padding-top: 0.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.project {
+  padding: 1rem;
+  background: var(--yellowtoblue);
+}
