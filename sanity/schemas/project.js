@@ -21,7 +21,7 @@ export default {
     {
       name: 'library',
       title: 'library',
-      type: 'reference',
+      type: 'array',
       of: [{ type: 'reference', to: { type: 'library' } }],
     },
     {
