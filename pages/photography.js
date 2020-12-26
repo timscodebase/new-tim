@@ -1,3 +1,5 @@
+import Instagram from '../components/Instagram'
+
 export default function Education() {
-  return <p>Education</p>;
+  return <Instagram />
 }
