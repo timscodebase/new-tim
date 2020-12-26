@@ -1,0 +1,25 @@
+.educationWrapper {
+  padding: 0.5rem var(--padding) 1rem var(--padding);
+}
+
+.educationWrapper h1 {
+  font-size: 3rem;
+  background: var(--purpletoyellow);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.education {
+  display: grid;
+  grid-gap: 0.5rem;
+  padding-top: 0.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.educationWrapper .h2 {
+  font-size: 2rem;
+  font-weight: 300;
+  font-family: 'Raleway', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}

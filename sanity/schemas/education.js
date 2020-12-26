@@ -1,6 +1,6 @@
 export default {
-  name: 'project',
-  title: 'Project',
+  name: 'education',
+  title: 'Education',
   type: 'document',
   fields: [
     {
@@ -19,24 +19,21 @@ export default {
       type: 'string',
     },
     {
-      name: 'gitLink',
-      title: 'Github Link',
-      type: 'string',
+      name: 'logo',
+      title: 'Logo',
+      type: 'image',
     },
     {
-      name: 'image',
-      title: 'Image',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
+      name: 'category',
+      title: 'Category',
+      type: 'string',
     },
   ],
 
   preview: {
     select: {
       title: 'title',
-      media: 'mainImage',
+      media: 'logo',
     },
   },
 }

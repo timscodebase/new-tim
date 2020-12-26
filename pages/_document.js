@@ -18,12 +18,12 @@ class MyDocument extends Document {
           <link
             rel="preload"
             as="style"
-            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&family=Raleway&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;800&family=Raleway&display=swap"
           />
 
           <link
             rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&family=Raleway&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;800&family=Raleway&display=swap"
             media="print"
             onLoad="this.media='all'"
           />
@@ -31,7 +31,7 @@ class MyDocument extends Document {
           <noscript>
             <link
               rel="stylesheet"
-              href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&family=Raleway&display=swap"
+              href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;800&family=Raleway&display=swap"
             />
           </noscript>
           {/* Google Adsense */}
@@ -57,7 +57,7 @@ class MyDocument extends Document {
           `,
             }}
           />
-          <script src="https://unpkg.com/css-paint-polyfill" />
+          {/* <script src="https://unpkg.com/css-paint-polyfill" /> */}
           {this.props.styleTags}
         </Head>
         <body>
