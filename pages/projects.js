@@ -12,9 +12,7 @@ const ProjectQuery = groq`*[_type == "project"]{
   description,
   gitLink,
   image,
-  library,
   link,
-  publishedAt,
   title,
 }`
 

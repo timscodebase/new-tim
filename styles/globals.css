@@ -15,7 +15,12 @@
   /* Gradients */
   --bluetoyellow: linear-gradient(135deg, var(--blue) 0%, var(--yellow) 100%);
   --yellowtoblue: linear-gradient(135deg, var(--yellow) 0%, var(--blue) 100%);
-  --redtoblue: linear-gradient(225deg, var(--blue) 0%, var(--red) 100%);
+  --transtodarkblue: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.5) 0%,
+    var(--darkBlue) 100%
+  );
+  --redtoblue: linear-gradient(225deg, var(--blue) 0%, var(--red) 80%);
   --yellowtopurple: linear-gradient(
     135deg,
     var(--yellow) 0%,
