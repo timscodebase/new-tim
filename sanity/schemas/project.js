@@ -19,6 +19,11 @@ export default {
       type: 'string',
     },
     {
+      name: 'gitLink',
+      title: 'Git Link',
+      type: 'string',
+    },
+    {
       name: 'library',
       title: 'library',
       type: 'array',

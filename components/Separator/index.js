@@ -1,9 +1,10 @@
-// import 'css-paint-polyfill';
-// import workletURL from 'url-loader!css-houdini-lines';
-import styles from './Separator.module.css';
+// import 'css-paint-polyfill'
+// import workletURL from 'url-loader!css-houdini-lines'
 
-// CSS.paintWorklet.addModule(workletURL);
+import styles from './Separator.module.css'
 
 export default function Separator() {
-  return <div className={styles.separator} />;
+  // CSS.paintWorklet.addModule(workletURL)
+
+  return <div className={styles.separator} />
 }
