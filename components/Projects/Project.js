@@ -52,8 +52,12 @@ export default function Project({ project }) {
       <p>{description}</p>
       <section className="footer">
         <div className="links">
-          <a href={link}>Project Link</a>
-          <a href={gitLink}>GitHub Link</a>
+          <a href={link} target="_blank" rel="noopener noreferrer">
+            Project Link
+          </a>
+          <a href={gitLink} target="_blank" rel="noopener noreferrer">
+            GitHub Link
+          </a>
         </div>
       </section>
     </StyledProject>

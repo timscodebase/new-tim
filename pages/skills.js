@@ -1,3 +1,5 @@
-export default function Skills() {
-  return <p>Skills</p>;
+import Skills from '../components/Skills'
+
+export default function SkillsPage() {
+  return <Skills />
 }

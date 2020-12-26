@@ -1,0 +1,41 @@
+.skills {
+  padding: 0.5rem var(--padding) 1rem var(--padding);
+}
+
+.skills h1 {
+  font-size: 3rem;
+  background: var(--purpletoyellow);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tabs {
+  margin: 0 -2rem;
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.tablist {
+  border-top: 2px solid var(--purple);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: var(--yellowtoblue);
+}
+
+.tablist button {
+  flex: 0 1 125px;
+  padding: 0.5rem;
+  color: var(--purple);
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  user-select: none;
+}
+
+.tabs [role='tabpanel'] {
+  border-top: 2px solid var(--purple);
+  border-bottom: 2px solid var(--purple);
+  padding: 1rem;
+}

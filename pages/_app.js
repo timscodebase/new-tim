@@ -7,7 +7,6 @@ import '../styles/globals.css'
 
 export default function MyApp({ Component, pageProps }) {
   const { route } = useRouter()
-  console.log(route)
   return (
     <>
       {route == '/' ? <Header /> : <SecondaryHeader />}

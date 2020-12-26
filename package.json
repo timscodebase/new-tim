@@ -19,6 +19,7 @@
     "css-paint-polyfill": "^2.0.0",
     "groq": "^2.0.9",
     "next": "^10.0.4",
+    "next-on-netlify": "^2.6.3",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
