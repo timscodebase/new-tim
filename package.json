@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "start": "next start",
     "postbuild": "next-on-netlify"
   },
   "dependencies": {
@@ -15,8 +16,6 @@
     "@fortawesome/react-fontawesome": "^0.1.13",
     "@sanity/client": "^2.1.0",
     "@sanity/image-url": "^0.140.19",
-    "css-houdini-lines": "^1.0.4",
-    "css-paint-polyfill": "^2.0.0",
     "groq": "^2.0.9",
     "next": "^10.0.4",
     "next-on-netlify": "^2.6.3",

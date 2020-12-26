@@ -13,8 +13,10 @@ node_modules
 /coverage
 
 # next.js
-/.next/
-/out/
+.next
+out
+out_functions
+out_publish
 
 # production
 /build
