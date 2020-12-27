@@ -142,24 +142,26 @@ export default function ImageSlider() {
   const [state, dispatch] = useReducer(slidesReducer, initialState)
 
   const handlers = useSwipeable({
-    onSwipedLeft: () => dispatch({ type: 'NEXT' }),
-    onSwipedRight: () => dispatch({ type: 'PREV' }),
+    onSwipedLeft: () => dispatch({ type: 'PREV' }),
+    onSwipedRight: () => dispatch({ type: 'NEXT' }),
     preventDefaultTouchmoveEvent: true,
     trackMouse: true,
   })
 
   return (
-    <div {...handlers} className={styles.slides}>
-      <button type="button" onClick={() => dispatch({ type: 'PREV' })}>
-        ‹
-      </button>
-      {[...slides, ...slides, ...slides].map((slide, i) => {
-        const offset = slides.length + (state.slideIndex - i)
-        return <Slide slide={slide} offset={offset} key={i} />
-      })}
-      <button type="button" onClick={() => dispatch({ type: 'NEXT' })}>
-        ›
-      </button>
+    <div className={styles.slideWrapper}>
+      <div {...handlers} className={styles.slides}>
+        <button type="button" onClick={() => dispatch({ type: 'PREV' })}>
+          ‹
+        </button>
+        {[...slides, ...slides, ...slides].map((slide, i) => {
+          const offset = slides.length + (state.slideIndex - i)
+          return <Slide slide={slide} offset={offset} key={i} />
+        })}
+        <button type="button" onClick={() => dispatch({ type: 'NEXT' })}>
+          ›
+        </button>
+      </div>
     </div>
   )
 }
