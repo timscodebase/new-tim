@@ -1,0 +1,24 @@
+.photographyWrapper {
+  padding: 0.5rem var(--padding) 1rem var(--padding);
+}
+
+.photographyWrapper h1 {
+  font-size: 3rem;
+  background: var(--purpletoyellow);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.h2 {
+  font-size: 2rem;
+  font-weight: 300;
+  font-family: 'Raleway', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+.handpicked {
+}
+
+.instagrams {
+}

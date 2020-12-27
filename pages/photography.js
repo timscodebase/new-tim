@@ -1,5 +1,5 @@
-import Instagram from '../components/Instagram'
+import Photography from '../components/Photography'
 
-export default function Education() {
-  return <Instagram />
+export default function PhotographyPage() {
+  return <Photography />
 }
