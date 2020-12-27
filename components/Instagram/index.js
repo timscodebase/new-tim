@@ -57,42 +57,6 @@ function useInstagram() {
   }, [])
   return posts
 }
-function useInstagramStories() {
-  const [posts, setPosts] = useState([])
-  useEffect(() => {
-    fetch(`/.netlify/functions/instagramStories`)
-      .then(res => res.json())
-      .then(data => {
-        setPosts(data)
-      })
-  }, [])
-  return posts
-}
-
-function Stories() {
-  const stories = useInstagramStories()
-  if (!stories.length) return null
-  return (
-    <>
-      <h4>Stories</h4>
-      <StoriesStyles href="https://www.instagram.com/stories/tithos/">
-        {stories.map(story => (
-          <img
-            className="story"
-            key={story.media_preview}
-            src={`https://images.weserv.nl/?url=${encodeURIComponent(
-              story.display_url
-            )}&h=100`}
-            alt="@wesbos Instagram Story"
-            style={{
-              backgroundImage: `url(${converIGtoJPG(story.media_preview)})`,
-            }}
-          />
-        ))}
-      </StoriesStyles>
-    </>
-  )
-}
 
 export default function Instagram() {
   const gramz = useInstagram()
@@ -112,7 +76,6 @@ export default function Instagram() {
         </span>
       </h3>
       {!gramz.length && <p>One sec, getting the gramz...</p>}
-      {/* <Stories /> */}
       {gramz.length ? <h4>Posts</h4> : null}
       <InstaStyles>
         {gramz.map(gram => (
