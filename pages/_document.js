@@ -9,16 +9,8 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html>
+      <Html lang="en">
         <Head>
-          <meta charset="UTF-8" />
-          <title>Tim Smith</title>
-          <meta name="keywords" content="HTML, CSS, JavaScript, Photography" />
-          <meta
-            name="description"
-            content="I am a web developer, but also a lot more!"
-          />
-
           {/* Google Fonts */}
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
 
