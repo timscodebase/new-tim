@@ -49,7 +49,7 @@ function converIGtoJPG(base64data) {
 function useInstagram() {
   const [posts, setPosts] = useState([])
   useEffect(() => {
-    fetch(`/.netlify/functions/instagram`)
+    fetch(`/.netlify/out_functions/instagram`)
       .then(res => res.json())
       .then(data => {
         setPosts(data)
