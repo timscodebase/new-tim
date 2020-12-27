@@ -26,6 +26,10 @@
   background-image: paint(lines);
 }
 
+.fullBleed {
+  margin: 0.75rem -2rem;
+}
+
 /* .separator {
   height: 21px;
   background: rgb(255, 0, 0);

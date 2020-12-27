@@ -7,7 +7,7 @@ export default function Photography() {
     <div className={styles.photographyWrapper}>
       <h1>Photography</h1>
       <h2 className={styles.h2}>Hand Picked</h2>
-      <Separator />
+      <Separator fullBleed />
       <h2 className={styles.h2}>Instagram Snaps</h2>
       <Feed
         userName="tithos"

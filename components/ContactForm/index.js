@@ -32,46 +32,55 @@ class ContactForm extends React.Component {
     const { name, email, message } = this.state
     return (
       <form className={styles.form} onSubmit={this.handleSubmit}>
-        <p>
-          <label className={styles.label} htmlFor="name">
-            Your Name:{' '}
-            <input
-              className={styles.input}
-              type="text"
-              name="name"
-              value={name}
-              onChange={this.handleChange}
-            />
-          </label>
-        </p>
-        <p>
-          <label className={styles.label} htmlFor="email">
-            Your Email:{' '}
-            <input
-              className={styles.input}
-              type="email"
-              name="email"
-              value={email}
-              onChange={this.handleChange}
-            />
-          </label>
-        </p>
-        <p>
-          <label className={styles.label} htmlFor="message">
-            Message:{' '}
-            <textarea
-              className={styles.textarea}
-              name="message"
-              value={message}
-              onChange={this.handleChange}
-            />
-          </label>
-        </p>
-        <p>
-          <button className={styles.submit} type="submit">
-            Send
-          </button>
-        </p>
+        <div>
+          <div>
+            <label className={styles.label} htmlFor="name">
+              <p hidden>Your Name:</p>
+              <input
+                className={styles.input}
+                type="text"
+                name="name"
+                value={name}
+                placeholder="Your Name"
+                onChange={this.handleChange}
+              />
+            </label>
+          </div>
+          <div>
+            <label
+              className={`${styles.padTop} ${styles.label}`}
+              htmlFor="email"
+            >
+              <p hidden>Your Email:</p>
+              <input
+                className={styles.input}
+                type="email"
+                name="email"
+                value={email}
+                placeholder="Your Email"
+                onChange={this.handleChange}
+              />
+            </label>
+          </div>
+          <div>
+            <label
+              className={`${styles.padTop} ${styles.label}`}
+              htmlFor="message"
+            >
+              <p hidden>Message:</p>
+              <textarea
+                className={styles.textarea}
+                name="message"
+                value={message}
+                placeholder="Message"
+                onChange={this.handleChange}
+              />
+            </label>
+          </div>
+        </div>
+        <button className={styles.submit} type="submit">
+          Send
+        </button>
       </form>
     )
   }

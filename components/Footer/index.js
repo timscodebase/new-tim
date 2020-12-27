@@ -23,6 +23,8 @@ export default function Footer() {
       <footer className={styles.footer}>
         <h3>Contact Me</h3>
         <ContactForm />
+
+        <Separator fullBleed />
         <section className={styles.socialLinks}>
           <a
             href="https://www.facebook.com/tim.smith/"

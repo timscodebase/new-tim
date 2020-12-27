@@ -1,13 +1,22 @@
+.form {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 3fr 1fr;
+  margin-bottom: 2rem;
+}
+
 .label {
   display: flex;
   justify-content: space-between;
   color: var(--white);
-  padding: 0.5rem 0;
 }
 
-.input,
-.textarea {
-  width: 65%;
+.padTop {
+  padding-top: 0.5rem;
+}
+
+.form textarea {
+  width: 100%;
 }
 
 .submit {

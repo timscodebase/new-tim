@@ -8,6 +8,10 @@
 }
 
 .footer h3 {
+  font-size: 2rem;
+  font-weight: 300;
+  font-family: 'Raleway', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   color: var(--purple);
 }
 
