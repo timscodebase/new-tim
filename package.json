@@ -16,6 +16,7 @@
     "@fortawesome/react-fontawesome": "^0.1.13",
     "@sanity/client": "^2.1.0",
     "@sanity/image-url": "^0.140.19",
+    "critters": "^0.0.6",
     "css-houdini-lines": "^1.0.4",
     "css-paint-polyfill": "^2.0.0",
     "groq": "^2.0.9",
@@ -23,9 +24,9 @@
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-icons": "^4.1.0",
     "styled-components": "^5.2.1",
-    "url-loader": "^4.1.1",
-    "react-icons": "^4.1.0"
+    "url-loader": "^4.1.1"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
