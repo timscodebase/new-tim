@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
 import imageUrlBuilder from '@sanity/image-url'
+
+import styled from 'styled-components'
 import client from '../../client'
 
 const builder = imageUrlBuilder(client)

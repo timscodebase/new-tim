@@ -1,45 +1,18 @@
 import { useEffect, useRef, useReducer } from 'react'
 import { useSwipeable } from 'react-swipeable'
+import imageUrlBuilder from '@sanity/image-url'
 import PropTypes from 'prop-types'
+
+import client from '../../client'
 import styles from './ImageSlider.module.css'
 
-const slides = [
-  {
-    title: 'Machu Picchu',
-    subtitle: 'Peru',
-    description: 'Adventure is never far away',
-    image:
-      'https://images.unsplash.com/photo-1571771019784-3ff35f4f4277?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ',
-  },
-  {
-    title: 'Chamonix',
-    subtitle: 'France',
-    description: 'Let your dreams come true',
-    image:
-      'https://images.unsplash.com/photo-1581836499506-4a660b39478a?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ',
-  },
-  {
-    title: 'Mimisa Rocks',
-    subtitle: 'Australia',
-    description: 'A piece of heaven',
-    image:
-      'https://images.unsplash.com/photo-1566522650166-bd8b3e3a2b4b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ',
-  },
-  {
-    title: 'Four',
-    subtitle: 'Australia',
-    description: 'A piece of heaven',
-    image:
-      'https://images.unsplash.com/flagged/photo-1564918031455-72f4e35ba7a6?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ',
-  },
-  {
-    title: 'Five',
-    subtitle: 'Australia',
-    description: 'A piece of heaven',
-    image:
-      'https://images.unsplash.com/photo-1579130781921-76e18892b57b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ',
-  },
-]
+const builder = imageUrlBuilder(client)
+
+let GLOBALPHOTOS = {}
+
+function urlFor(source) {
+  return builder.image(source)
+}
 
 function useTilt(active) {
   const ref = useRef(null)
@@ -87,23 +60,23 @@ const initialState = {
   slideIndex: 0,
 }
 
-const slidesReducer = (state, event) => {
+const photosReducer = (state, event) => {
   if (event.type === 'NEXT') {
     return {
       ...state,
-      slideIndex: (state.slideIndex + 1) % slides.length,
+      slideIndex: (state.slideIndex + 1) % GLOBALPHOTOS.length,
     }
   }
   if (event.type === 'PREV') {
     return {
       ...state,
       slideIndex:
-        state.slideIndex === 0 ? slides.length - 1 : state.slideIndex - 1,
+        state.slideIndex === 0 ? GLOBALPHOTOS.length - 1 : state.slideIndex - 1,
     }
   }
 }
 
-function Slide({ slide, offset }) {
+function Slide({ photo, offset }) {
   const active = offset === 0 ? true : null
   const ref = useTilt(active)
 
@@ -120,13 +93,13 @@ function Slide({ slide, offset }) {
       <div
         className={styles.slideBackground}
         style={{
-          backgroundImage: `url('${slide.image}')`,
+          backgroundImage: `url('${urlFor(photo.image)}')`,
         }}
       />
       <div
         className={styles.slideContent}
         style={{
-          backgroundImage: `url('${slide.image}')`,
+          backgroundImage: `url('${urlFor(photo.image)}')`,
         }}
       />
     </div>
@@ -134,12 +107,12 @@ function Slide({ slide, offset }) {
 }
 
 Slide.propTypes = {
-  slide: PropTypes.object,
+  photo: PropTypes.object,
   offset: PropTypes.number,
 }
 
-export default function ImageSlider() {
-  const [state, dispatch] = useReducer(slidesReducer, initialState)
+export default function ImageSlider({ photos }) {
+  const [state, dispatch] = useReducer(photosReducer, initialState)
 
   const handlers = useSwipeable({
     onSwipedLeft: () => dispatch({ type: 'PREV' }),
@@ -148,15 +121,19 @@ export default function ImageSlider() {
     trackMouse: true,
   })
 
+  useEffect(() => {
+    GLOBALPHOTOS = photos
+  }, [])
+
   return (
     <div className={styles.slideWrapper}>
       <div {...handlers} className={styles.slides}>
         <button type="button" onClick={() => dispatch({ type: 'PREV' })}>
           ‹
         </button>
-        {[...slides, ...slides, ...slides].map((slide, i) => {
-          const offset = slides.length + (state.slideIndex - i)
-          return <Slide slide={slide} offset={offset} key={i} />
+        {[...photos, ...photos, ...photos].map((photo, i) => {
+          const offset = photos.length + (state.slideIndex - i)
+          return <Slide photo={photo} offset={offset} key={i} />
         })}
         <button type="button" onClick={() => dispatch({ type: 'NEXT' })}>
           ›
@@ -164,4 +141,8 @@ export default function ImageSlider() {
       </div>
     </div>
   )
+}
+
+ImageSlider.propTypes = {
+  photos: PropTypes.array,
 }
