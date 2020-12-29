@@ -21,6 +21,14 @@ ProjectsPage.getInitialProps = async () => {
   return { projects }
 }
 
+export async function getServerSideProps() {
+  const projects = await client.fetch(ProjectQuery)
+
+  return {
+    props: { projects }, // will be passed to the page component as props
+  }
+}
+
 ProjectsPage.propTypes = {
   projects: PropTypes.array,
 }

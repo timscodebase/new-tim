@@ -15,10 +15,17 @@ const photoQuery = groq`*[_type == "photo"]{
   title
 }`
 
-PhotographyPage.getInitialProps = async () => {
+// PhotographyPage.getInitialProps = async () => {
+//   const photos = await client.fetch(photoQuery)
+//   return { photos }
+// }
+
+export async function getServerSideProps() {
   const photos = await client.fetch(photoQuery)
-  console.log(photos)
-  return { photos }
+
+  return {
+    props: { photos }, // will be passed to the page component as props
+  }
 }
 
 PhotographyPage.propTypes = {

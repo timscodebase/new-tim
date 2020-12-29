@@ -32,11 +32,21 @@ const webResourcesEdQuery = groq`*[_type == "education" && category == "web reso
   title
 }`
 
-EducationPage.getInitialProps = async () => {
+// EducationPage.getInitialProps = async () => {
+//   const onlineCourses = await client.fetch(onlineCoursesEdQuery)
+//   const tutorials = await client.fetch(tutorialsEdQuery)
+//   const webResources = await client.fetch(webResourcesEdQuery)
+//   return { onlineCourses, tutorials, webResources }
+// }
+
+export async function getServerSideProps() {
   const onlineCourses = await client.fetch(onlineCoursesEdQuery)
   const tutorials = await client.fetch(tutorialsEdQuery)
   const webResources = await client.fetch(webResourcesEdQuery)
-  return { onlineCourses, tutorials, webResources }
+
+  return {
+    props: { onlineCourses, tutorials, webResources }, // will be passed to the page component as props
+  }
 }
 
 EducationPage.propTypes = {
