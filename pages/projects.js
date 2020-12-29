@@ -16,10 +16,10 @@ const ProjectQuery = groq`*[_type == "project"]{
   title,
 }`
 
-ProjectsPage.getInitialProps = async () => {
-  const projects = await client.fetch(ProjectQuery)
-  return { projects }
-}
+// ProjectsPage.getInitialProps = async () => {
+//   const projects = await client.fetch(ProjectQuery)
+//   return { projects }
+// }
 
 export async function getServerSideProps() {
   const projects = await client.fetch(ProjectQuery)
