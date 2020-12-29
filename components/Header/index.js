@@ -10,7 +10,7 @@ export default function Header() {
   return (
     <>
       <Head>
-        <meta charset="UTF-8" />
+        <meta charSet="UTF-8" />
         <title>Tim Smith</title>
         <meta name="keywords" content="HTML, CSS, JavaScript, Photography" />
         <meta
