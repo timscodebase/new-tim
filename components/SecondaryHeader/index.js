@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCodepen, faDev, faGithub } from '@fortawesome/free-brands-svg-icons'
 import Separator from '../Separator'
@@ -9,7 +10,11 @@ export default function SecondaryHeader() {
     <>
       <header className={styles.secondaryHeader}>
         <section>
-          <h1 className={styles.h1}>Tim Smith</h1>
+          <Link href="/">
+            <a>
+              <h1 className={styles.h1}>Tim Smith</h1>
+            </a>
+          </Link>
           <div className={styles.carousel}>
             <div className={styles.inner}>
               <div className={styles.element}>Web Developer</div>

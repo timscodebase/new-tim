@@ -5,6 +5,8 @@
   --red: rgba(255, 90, 73, 1);
   --purple: rgba(255, 0, 142, 1);
   --yellow: rgba(255, 248, 0, 1);
+  --darkPurple: rgb(104, 0, 57);
+  --darkYellow: rgb(109, 105, 0);
   --blue: rgba(0, 243, 255, 1);
   --darkBlue: rgb(0, 104, 189);
   --orange: rgb(255, 217, 0);
@@ -35,7 +37,11 @@
 
 body {
   color: var(--white);
-  background-color: var(--black);
+  background: linear-gradient(
+    135deg,
+    var(--darkYellow) 0%,
+    var(--darkPurple) 100%
+  );
 }
 
 /* Box sizing rules */
@@ -79,6 +85,19 @@ body {
   margin: 0;
   font-family: 'Raleway', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+.bodyWrapper {
+  width: 1200px;
+  margin: 0 auto;
+  box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.75);
+}
+
+@media only screen and (max-width: 800px) {
+  .bodyWrapper {
+    max-width: 500px;
+    margin: 0;
+  }
 }
 
 h1,

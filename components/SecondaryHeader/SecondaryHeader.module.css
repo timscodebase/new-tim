@@ -14,11 +14,12 @@
 }
 
 .socialIcons {
-  width: 45vw;
-  margin: 0 auto;
+  width: 160px;
+  margin: 0 0 0 auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   font-size: 1.5rem;
 }
 

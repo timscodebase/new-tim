@@ -8,11 +8,11 @@ import '../styles/globals.css'
 export default function MyApp({ Component, pageProps }) {
   const { route } = useRouter()
   return (
-    <>
+    <div className="bodyWrapper">
       {route == '/' ? <Header /> : <SecondaryHeader />}
       <Component {...pageProps} />
       <Footer />
-    </>
+    </div>
   )
 }
 

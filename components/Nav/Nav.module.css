@@ -1,3 +1,7 @@
+.nav {
+  display: block;
+}
+
 .link {
   display: flex;
   justify-content: space-between;
@@ -9,6 +13,7 @@
   background: var(--bluetoyellow);
   border: 0;
   outline: none;
+  border-top: 2px solid var(--purple);
   border-bottom: 2px solid var(--purple);
   font-size: 1.5rem;
 }
@@ -20,4 +25,18 @@
 
 .link svg {
   font-size: 3rem;
+}
+
+@media only screen and (min-width: 400px) {
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px 0;
+    gap: 5px;
+    background-color: var(--black);
+  }
+
+  .link {
+    flex: 1 1 410px;
+  }
 }
