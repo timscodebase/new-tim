@@ -5,6 +5,7 @@ import {
   faCameraRetro,
   faLaptopCode,
   faTools,
+  faUserAstronaut,
 } from '@fortawesome/free-solid-svg-icons'
 
 import styles from './Nav.module.css'
@@ -34,6 +35,12 @@ export default function Nav() {
         <a className={styles.link}>
           <p>Photography</p>
           <FontAwesomeIcon icon={faCameraRetro} />
+        </a>
+      </Link>
+      <Link href="/uses">
+        <a className={styles.link}>
+          <p>Uses</p>
+          <FontAwesomeIcon icon={faUserAstronaut} />
         </a>
       </Link>
     </nav>

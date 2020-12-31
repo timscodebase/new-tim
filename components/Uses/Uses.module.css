@@ -1,0 +1,32 @@
+.usesWrapper {
+  background-color: var(--black);
+  padding: 0.5rem var(--padding) 1rem var(--padding);
+}
+
+.usesWrapper h1 {
+  font-size: 3rem;
+  background: var(--purpletoyellow);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.flexWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.techCategory {
+  flex: 1 1 369px;
+  padding: 10px;
+  background: var(--yellowtoblue);
+  margin: 0 -2rem;
+}
+
+.techCategory h2 {
+  font-size: 1.5rem;
+  background: var(--redtoblue);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

@@ -1,36 +1,41 @@
 .nav {
-  display: block;
+  display: flex;
+  gap: 3px;
+  flex-wrap: wrap;
+  padding: 3px;
+  background: rgb(255, 0, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 1) 0%,
+    rgba(252, 253, 29, 1) 20%,
+    rgba(26, 255, 0, 1) 40%,
+    rgba(44, 48, 253, 1) 60%,
+    rgba(253, 55, 252, 1) 80%,
+    rgba(252, 69, 69, 1) 100%
+  );
 }
 
 .link {
   display: flex;
+  flex: 1 1 180px;
   justify-content: space-between;
   align-items: center;
-  padding: var(--padding);
+  padding: 10px 20px;
   color: var(--purple);
-  /* font-weight: bolder; */
   text-transform: uppercase;
-  background: var(--bluetoyellow);
+  background-color: var(--black);
   border: 0;
   outline: none;
-  border-top: 2px solid var(--purple);
-  border-bottom: 2px solid var(--purple);
-  font-size: 1.5rem;
-}
-
-.link:nth-child(even) {
-  flex-direction: row-reverse;
-  background: var(--yellowtoblue);
+  font-size: 0.8rem;
 }
 
 .link svg {
-  font-size: 3rem;
+  font-size: 1.25rem;
 }
 
 @media only screen and (min-width: 400px) {
   .nav {
     display: flex;
-    flex-wrap: wrap;
     padding: 5px 0;
     gap: 5px;
     background-color: var(--black);

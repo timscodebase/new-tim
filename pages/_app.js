@@ -1,7 +1,9 @@
 import { useRouter } from 'next/router'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
+import Nav from '../components/Nav'
 import SecondaryHeader from '../components/SecondaryHeader'
+import Separator from '../components/Separator'
 
 import '../styles/globals.css'
 
@@ -10,6 +12,8 @@ export default function MyApp({ Component, pageProps }) {
   return (
     <div className="bodyWrapper">
       {route == '/' ? <Header /> : <SecondaryHeader />}
+      <Nav />
+      <Separator />
       <Component {...pageProps} />
       <Footer />
     </div>
