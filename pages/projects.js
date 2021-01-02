@@ -1,28 +1,36 @@
+import gql from 'graphql-tag'
+import { useQuery } from '@apollo/react-hooks'
 import PropTypes from 'prop-types'
-import groq from 'groq'
 import Projects from '../components/Projects'
 
-import client from '../client'
-
-export default function ProjectsPage({ projects }) {
-  return <Projects projects={projects} />
-}
-
-const ProjectQuery = groq`*[_type == "project"]{
-  description,
-  gitLink,
-  image,
-  link,
-  title,
-}`
-
-export async function getServerSideProps() {
-  const projects = await client.fetch(ProjectQuery)
-
-  return {
-    props: { projects }, // will be passed to the page component as props
+const QUERY = gql`
+  query allProjects {
+    allProject {
+      description
+      gitLink
+      image {
+        asset {
+          url
+        }
+      }
+      link
+      title
+    }
   }
+`
+
+const ProjectsPage = () => {
+  const { loading, data } = useQuery(QUERY)
+  // const { allProject } = data
+
+  if (loading || !data) {
+    return <h1>loading...</h1>
+  }
+
+  return <Projects projects={data.allProject} />
 }
+
+export default ProjectsPage
 
 ProjectsPage.propTypes = {
   projects: PropTypes.array,
