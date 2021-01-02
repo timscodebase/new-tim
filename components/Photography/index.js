@@ -1,16 +1,21 @@
 import PropTypes from 'prop-types'
+
 import Feed from 'react-instagram-authless-feed'
+import ImageComponent from '../ImageComponent'
 import Separator from '../Separator'
-import ImageSlider from '../ImageSlider'
 
 import styles from './Photography.module.css'
 
-export default function Photography({ photos }) {
+export default function Photography({ cloudinaryImages }) {
   return (
     <div className={styles.photographyWrapper}>
       <h1>Photography</h1>
       <h2 className={styles.h2}>Hand Picked</h2>
-      <ImageSlider photos={photos} />
+      <div className={styles.handpicked}>
+        {cloudinaryImages.map(image => (
+          <ImageComponent key={image.public_id} {...image} />
+        ))}
+      </div>
       <Separator fullBleed />
       <h2 className={styles.h2}>Instagram Snaps</h2>
       <Feed
@@ -24,5 +29,5 @@ export default function Photography({ photos }) {
 }
 
 Photography.propTypes = {
-  photos: PropTypes.array,
+  cloudinaryImages: PropTypes.array,
 }

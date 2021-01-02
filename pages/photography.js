@@ -1,33 +1,16 @@
 import PropTypes from 'prop-types'
-import groq from 'groq'
 import Photography from '../components/Photography'
 
-import client from '../client'
-
-export default function PhotographyPage({ photos }) {
-  return <Photography photos={photos} />
+export default function PhotographyPage({ cloudinaryImages }) {
+  return <Photography cloudinaryImages={cloudinaryImages} />
 }
 
-const photoQuery = groq`*[_type == "photo"]{
-  "alt": image.alt,
-  image,
-  slug,
-  title
-}`
+export async function getServerSideProps({ query }) {
+  const cloudinaryImages = query.resources
 
-// PhotographyPage.getInitialProps = async () => {
-//   const photos = await client.fetch(photoQuery)
-//   return { photos }
-// }
-
-export async function getServerSideProps() {
-  const photos = await client.fetch(photoQuery)
-
-  return {
-    props: { photos }, // will be passed to the page component as props
-  }
+  return { props: { cloudinaryImages } }
 }
 
 PhotographyPage.propTypes = {
-  photos: PropTypes.array,
+  cloudinaryImages: PropTypes.array,
 }

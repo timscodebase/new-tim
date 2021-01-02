@@ -18,6 +18,18 @@
 }
 
 .handpicked {
+  height: 415px;
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+
+.handpicked img {
+  max-width: 90%;
+  height: 90%;
+  display: block;
+  margin: auto;
+  scroll-snap-align: start;
 }
 
 .gramz {
