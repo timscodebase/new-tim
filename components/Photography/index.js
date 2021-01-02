@@ -18,12 +18,12 @@ export default function Photography({ cloudinaryImages }) {
       </div>
       <Separator fullBleed />
       <h2 className={styles.h2}>Instagram Snaps</h2>
-      <Feed
+      {/* <Feed
         userName="tithos"
         className={styles.gramz}
         classNameLoading="Loading"
         limit="6"
-      />
+      /> */}
     </div>
   )
 }
