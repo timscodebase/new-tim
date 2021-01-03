@@ -38,7 +38,7 @@ export default function Post({ post }) {
   })
 
   return (
-    <div className={styles.blogPost}>
+    <article className={styles.blogPost}>
       {loading || !data ? (
         <div className={styles.loaderWrapper}>
           <Loader
@@ -59,7 +59,7 @@ export default function Post({ post }) {
           )
         )
       )}
-    </div>
+    </article>
   )
 }
 

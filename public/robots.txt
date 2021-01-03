@@ -1,0 +1,6 @@
+Sitemap: https://new-tim.netlify.app/api/blog-sitemap
+
+User-agent: *
+Allow: /*
+
+Disallow: /api/*
