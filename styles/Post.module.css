@@ -2,16 +2,82 @@
   background-color: var(--black);
   padding: 0.5rem var(--padding) 1rem var(--padding);
 }
+.blogGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+  margin: 0 -2rem;
+}
 
-.blog h1 {
+.blogPost {
+  padding: var(--padding);
+  background-color: var(--black);
+}
+
+.blogPost h1 {
   font-size: 3rem;
+  padding-bottom: 1rem;
   background: var(--purpletoyellow);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.blogPost {
-  padding: var(--padding);
-  background-color: var(--black);
+.blogPost p {
+  padding-bottom: 1rem;
+  overflow-wrap: break-word;
+}
+
+.categories {
+  display: flex;
+  justify-content: end;
+}
+
+.blogPost img {
+  width: 100%;
+  height: auto;
+  opacity: 0.75;
+  margin-bottom: 0.5rem;
+}
+
+.blogPost a,
+.blogPost a:visited {
+  background: var(--purpletoyellow);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.blogPost a:hover {
+  background: var(--yellowtopurple);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.blogPost [data-category] {
+  color: var(--black);
+  padding: 5px 10px;
+  margin-left: auto;
+  margin-bottom: -0.6rem;
+  border-radius: 10px 2px 10px 2px;
+  background: var(--purpletoyellow);
+}
+
+.blogPost [data-category='Poetry'] {
+  background: var(--bluetoyellow);
+}
+
+.author {
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-align: right;
+}
+
+.author span {
+  padding-bottom: 1rem;
+  background: var(--purpletoyellow);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

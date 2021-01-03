@@ -24,12 +24,19 @@ export default {
       to: { type: 'author' },
     },
     {
-      name: 'mainImage',
-      title: 'Main image',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
+      name: 'fullImage',
+      title: 'Full Image',
+      type: 'string',
+    },
+    {
+      name: 'medImage',
+      title: 'Medium Image',
+      type: 'string',
+    },
+    {
+      name: 'smallImage',
+      title: 'Small Image',
+      type: 'string',
     },
     {
       name: 'categories',

@@ -17,7 +17,6 @@
     "@fortawesome/react-fontawesome": "^0.1.13",
     "@sanity/block-content-to-react": "^2.0.7",
     "@sanity/client": "^2.1.0",
-    "@sanity/image-url": "^0.140.19",
     "apollo-boost": "^0.4.9",
     "axios": "^0.21.1",
     "cloudinary": "^1.23.0",

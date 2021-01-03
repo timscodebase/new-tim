@@ -9,6 +9,8 @@
   background: var(--redtoblue);
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--black);
 }
 
 /* .heart {

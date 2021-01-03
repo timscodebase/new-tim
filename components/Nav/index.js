@@ -6,6 +6,7 @@ import {
   faLaptopCode,
   faTools,
   faUserAstronaut,
+  faRss,
 } from '@fortawesome/free-solid-svg-icons'
 
 import styles from './Nav.module.css'
@@ -40,7 +41,7 @@ export default function Nav() {
       <Link href="/blog">
         <a className={styles.link}>
           <p>Blog</p>
-          <FontAwesomeIcon icon={faUserAstronaut} />
+          <FontAwesomeIcon icon={faRss} />
         </a>
       </Link>
       <Link href="/uses">
