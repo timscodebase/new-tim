@@ -11,8 +11,8 @@ function urlFor(source) {
 }
 
 const StyledProject = styled.div`
+  flex: 1 1 195px;
   padding: 1rem;
-  margin: 0 -2rem;
   background: var(--transtodarkblue), url(${props => props.image});
   background-size: cover;
   margin-bottom: 5px;

@@ -66,27 +66,29 @@ export default function Post({ post }) {
             fullImage,
             title,
           }) => (
-            <article className={styles.blogPost} key={title}>
+            <div key={title}>
               <PostMeta excerpt={excerpt} image={medImage} title={title} />
-              <img
-                srcSet={`${smallImage} 400w, ${medImage} 800w`}
-                sizes="(max-width: 600px) 400px, 800px"
-                src={fullImage}
-                alt={title}
-              />
-              <div className={styles.categories}>
-                {categories.map((category, i) => (
-                  <span key={i} data-category={category.title}>
-                    {category.title}
-                  </span>
-                ))}
-              </div>
-              <h1>{title}</h1>
-              <BlockContent blocks={bodyRaw} />
-              <p className={styles.author}>
-                <span>Author</span> - {author.name}
-              </p>
-            </article>
+              <article className={styles.blogPost}>
+                <img
+                  srcSet={`${smallImage} 400w, ${medImage} 800w`}
+                  sizes="(max-width: 600px) 400px, 800px"
+                  src={fullImage}
+                  alt={title}
+                />
+                <div className={styles.categories}>
+                  {categories.map((category, i) => (
+                    <span key={i} data-category={category.title}>
+                      {category.title}
+                    </span>
+                  ))}
+                </div>
+                <h1>{title}</h1>
+                <BlockContent blocks={bodyRaw} />
+                <p className={styles.author}>
+                  <span>Author</span> - {author.name}
+                </p>
+              </article>
+            </div>
           )
         )
       )}

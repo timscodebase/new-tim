@@ -46,6 +46,14 @@ ol[class] {
   padding: 0;
 }
 
+ul {
+  padding-left: 1rem;
+}
+
+li {
+  list-style: none;
+}
+
 body,
 h1,
 h2,

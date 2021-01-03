@@ -24,3 +24,10 @@
   padding-top: 0.5rem;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
+
+.projectsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+  margin: 0 -2rem;
+}

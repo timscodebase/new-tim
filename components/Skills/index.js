@@ -64,22 +64,63 @@ export default function Skills() {
               Accessibility
             </button>
           </div>
-          <div role="tabpanel" aria-labelledby="html">
-            <p>HTML is great!</p>
+          <div
+            className={styles.tabPanel}
+            role="tabpanel"
+            aria-labelledby="html"
+          >
+            <p>
+              HTML has change since I have began writing it, yet it remains the
+              scaffolding upon which the web is built.
+            </p>
+            <p>
+              I have stayed up-to-date with che changes in HTML from HTML3 to
+              HTML5 and I have learned clean, semantic HTML is among the most
+              important aspects of great website.
+            </p>
+            <p>
+              HTML5 brought with it a host of new tags and syntax that has been
+              making my life easier.
+            </p>
           </div>
-          <div role="tabpanel" aria-labelledby="css" hidden>
+          <div
+            className={styles.tabPanel}
+            role="tabpanel"
+            aria-labelledby="css"
+            hidden
+          >
             <p>CSS is great</p>
           </div>
-          <div role="tabpanel" aria-labelledby="js" hidden>
+          <div
+            className={styles.tabPanel}
+            role="tabpanel"
+            aria-labelledby="js"
+            hidden
+          >
             <p>JavaScript is great!</p>
           </div>
-          <div role="tabpanel" aria-labelledby="git" hidden>
+          <div
+            className={styles.tabPanel}
+            role="tabpanel"
+            aria-labelledby="git"
+            hidden
+          >
             <p>Git is great!</p>
           </div>
-          <div role="tabpanel" aria-labelledby="mobile" hidden>
+          <div
+            className={styles.tabPanel}
+            role="tabpanel"
+            aria-labelledby="mobile"
+            hidden
+          >
             <p>Mobile is great</p>
           </div>
-          <div role="tabpanel" aria-labelledby="acc" hidden>
+          <div
+            className={styles.tabPanel}
+            role="tabpanel"
+            aria-labelledby="acc"
+            hidden
+          >
             <p>Accessibility is great!</p>
           </div>
         </div>

@@ -11,6 +11,10 @@
   -webkit-text-fill-color: transparent;
 }
 
+.tabPanel p {
+  margin-bottom: 1rem;
+}
+
 .tabs {
   margin: 0 -2rem;
   background-color: var(--white);
@@ -33,6 +37,11 @@
   border: 0;
   outline: 0;
   user-select: none;
+}
+
+.tablist [aria-selected='true'] {
+  color: var(--white);
+  background-color: rgba(255, 0, 142, 0.75);
 }
 
 .tabs [role='tabpanel'] {

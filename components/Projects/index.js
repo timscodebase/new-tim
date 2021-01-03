@@ -41,9 +41,11 @@ export default function Projects() {
   return (
     <div className={styles.projectsWrapper}>
       <h1>Projects</h1>
-      {data.allProject.map(project => (
-        <Project key={project.title} project={project} />
-      ))}
+      <div className={styles.projectsGrid}>
+        {data.allProject.map(project => (
+          <Project key={project.title} project={project} />
+        ))}
+      </div>
     </div>
   )
 }

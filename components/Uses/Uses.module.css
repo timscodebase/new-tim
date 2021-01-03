@@ -3,6 +3,10 @@
   padding: 0.5rem var(--padding) 1rem var(--padding);
 }
 
+.usesWrapper ul {
+  color: var(--black);
+}
+
 .usesWrapper h1 {
   font-size: 3rem;
   background: var(--purpletoyellow);
