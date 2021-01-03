@@ -37,6 +37,12 @@ export default function Nav() {
           <FontAwesomeIcon icon={faCameraRetro} />
         </a>
       </Link>
+      <Link href="/blog">
+        <a className={styles.link}>
+          <p>Blog</p>
+          <FontAwesomeIcon icon={faUserAstronaut} />
+        </a>
+      </Link>
       <Link href="/uses">
         <a className={styles.link}>
           <p>Uses</p>

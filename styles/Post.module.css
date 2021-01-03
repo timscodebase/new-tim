@@ -1,0 +1,17 @@
+.blog {
+  background-color: var(--black);
+  padding: 0.5rem var(--padding) 1rem var(--padding);
+}
+
+.blog h1 {
+  font-size: 3rem;
+  background: var(--purpletoyellow);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.blogPost {
+  padding: var(--padding);
+  background-color: var(--black);
+}
