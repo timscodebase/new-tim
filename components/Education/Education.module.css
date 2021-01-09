@@ -11,6 +11,12 @@
   -webkit-text-fill-color: transparent;
 }
 
+.edGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
 .education {
   display: grid;
   grid-gap: 0.5rem;

@@ -40,7 +40,11 @@ export default function Web() {
           />
         </div>
       ) : (
-        data.allEducation.map(web => <Course key={web.title} {...web} />)
+        <div className={styles.edGrid}>
+          {data.allEducation.map(web => (
+            <Course key={web.title} {...web} />
+          ))}
+        </div>
       )}
     </div>
   )

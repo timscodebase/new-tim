@@ -1,11 +1,20 @@
 .footer {
+  flex-wrap: wrap;
   background-color: var(--black);
   padding: var(--padding);
   padding-top: 1rem;
 }
 
-.footer a {
+.footer section {
+  flex: 1 550px;
+}
+
+.footer a,
+.footer:visited {
   color: var(--red);
+}
+.footer a:hover {
+  color: var(--orange);
 }
 
 .footer h3 {
@@ -17,14 +26,33 @@
 }
 
 .socialLinks {
+  max-width: 360px;
   display: flex;
   justify-content: space-between;
   font-size: 2rem;
   padding: 1rem 0;
+  margin: 0 auto;
 }
 
 .signOff {
   color: var(--white);
   padding: 1rem 0;
   text-align: center;
+}
+
+.hide {
+  display: block;
+}
+
+@media (min-width: 1024px) {
+  .footer {
+    display: flex;
+  }
+  .hide {
+    display: none;
+  }
+
+  .socialLinks {
+    padding-top: 10%;
+  }
 }

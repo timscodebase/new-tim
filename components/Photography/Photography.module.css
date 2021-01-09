@@ -22,6 +22,7 @@
   height: 415px;
   display: flex;
   overflow-x: scroll;
+  margin: 0 -2rem;
   scroll-snap-type: x mandatory;
 }
 

@@ -40,9 +40,11 @@ export default function Courses() {
           />
         </div>
       ) : (
-        data.allEducation.map(course => (
-          <Course key={course.title} {...course} />
-        ))
+        <div className={styles.edGrid}>
+          {data.allEducation.map(course => (
+            <Course key={course.title} {...course} />
+          ))}
+        </div>
       )}
     </div>
   )

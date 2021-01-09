@@ -22,10 +22,9 @@
 }
 
 .techCategory {
-  flex: 1 1 369px;
+  flex: 1 1 545px;
   padding: 10px;
   background: var(--yellowtoblue);
-  margin: 0 -2rem;
 }
 
 .techCategory h2 {
@@ -33,4 +32,10 @@
   background: var(--redtoblue);
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 600px) {
+  .techCategory {
+    margin: 0 -2rem;
+  }
 }

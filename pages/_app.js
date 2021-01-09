@@ -1,9 +1,7 @@
 import withApollo from 'next-with-apollo'
 import { ApolloProvider } from '@apollo/react-hooks'
 import ApolloClient, { InMemoryCache } from 'apollo-boost'
-import { useRouter } from 'next/router'
 import Footer from '../components/Footer'
-import Header from '../components/Header'
 import Nav from '../components/Nav'
 import SecondaryHeader from '../components/SecondaryHeader'
 import Separator from '../components/Separator'
@@ -11,11 +9,10 @@ import Separator from '../components/Separator'
 import '../styles/globals.css'
 
 function Tim({ Component, pageProps, apollo }) {
-  const { route } = useRouter()
   return (
     <ApolloProvider client={apollo}>
       <div className="bodyWrapper">
-        {route == '/' ? <Header /> : <SecondaryHeader />}
+        <SecondaryHeader />
         <Nav />
         <Separator />
         <Component {...pageProps} />
