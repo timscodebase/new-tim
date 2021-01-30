@@ -36,7 +36,7 @@ export default function Footer() {
               target="_blank"
               rel="noreferrer noopener"
             >
-              <FontAwesomeIcon icon={faFacebook} />
+              <FontAwesomeIcon width="0" icon={faFacebook} />
             </a>
             <a
               aria-label="twitter"
@@ -44,7 +44,7 @@ export default function Footer() {
               target="_blank"
               rel="noreferrer noopener"
             >
-              <FontAwesomeIcon icon={faTwitter} />
+              <FontAwesomeIcon width="0" icon={faTwitter} />
             </a>
             <a
               aria-label="instagram"
@@ -52,7 +52,7 @@ export default function Footer() {
               target="_blank"
               rel="noreferrer noopener"
             >
-              <FontAwesomeIcon icon={faInstagram} />
+              <FontAwesomeIcon width="0" icon={faInstagram} />
             </a>
             <a
               aria-label="dev"
@@ -60,7 +60,7 @@ export default function Footer() {
               target="_blank"
               rel="noreferrer noopener"
             >
-              <FontAwesomeIcon icon={faDev} />
+              <FontAwesomeIcon width="0" icon={faDev} />
             </a>
             <a
               aria-label="github"
@@ -68,7 +68,7 @@ export default function Footer() {
               target="_blank"
               rel="noreferrer noopener"
             >
-              <FontAwesomeIcon icon={faGithub} />
+              <FontAwesomeIcon width="0" icon={faGithub} />
             </a>
             <a
               aria-label="codepen"
@@ -76,7 +76,7 @@ export default function Footer() {
               target="_blank"
               rel="noreferrer noopener"
             >
-              <FontAwesomeIcon icon={faCodepen} />
+              <FontAwesomeIcon width="0" icon={faCodepen} />
             </a>
           </div>
           <div className={styles.signOff}>

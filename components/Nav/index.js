@@ -17,37 +17,37 @@ export default function Nav() {
       <Link href="/projects">
         <a className={` ${styles.link}  ${styles.pink}`}>
           <p>Projects</p>
-          <FontAwesomeIcon icon={faLaptopCode} />
+          <FontAwesomeIcon width="0" icon={faLaptopCode} />
         </a>
       </Link>
       <Link href="/skills">
         <a className={styles.link}>
           <p>Skills</p>
-          <FontAwesomeIcon icon={faTools} />
+          <FontAwesomeIcon width="0" icon={faTools} />
         </a>
       </Link>
       <Link href="/education">
         <a className={styles.link}>
           <p>Education</p>
-          <FontAwesomeIcon icon={faBrain} />
+          <FontAwesomeIcon width="0" icon={faBrain} />
         </a>
       </Link>
       <Link href="/photography">
         <a className={styles.link}>
           <p>Photography</p>
-          <FontAwesomeIcon icon={faCameraRetro} />
+          <FontAwesomeIcon width="0" icon={faCameraRetro} />
         </a>
       </Link>
       <Link href="/blog">
         <a className={styles.link}>
           <p>Blog</p>
-          <FontAwesomeIcon icon={faRss} />
+          <FontAwesomeIcon width="0" icon={faRss} />
         </a>
       </Link>
       <Link href="/uses">
         <a className={styles.link}>
           <p>Uses</p>
-          <FontAwesomeIcon icon={faUserAstronaut} />
+          <FontAwesomeIcon width="0" icon={faUserAstronaut} />
         </a>
       </Link>
     </nav>

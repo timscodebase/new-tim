@@ -31,7 +31,7 @@ export default function SecondaryHeader() {
             target="_blank"
             rel="noreferrer noopener"
           >
-            <FontAwesomeIcon icon={faCodepen} />
+            <FontAwesomeIcon width="0" icon={faCodepen} />
           </a>
           <a
             aria-label="dev"
@@ -39,7 +39,7 @@ export default function SecondaryHeader() {
             target="_blank"
             rel="noreferrer noopener"
           >
-            <FontAwesomeIcon icon={faDev} />
+            <FontAwesomeIcon width="0" icon={faDev} />
           </a>
           <a
             aria-label="github"
@@ -47,7 +47,7 @@ export default function SecondaryHeader() {
             target="_blank"
             rel="noreferrer noopener"
           >
-            <FontAwesomeIcon icon={faGithub} />
+            <FontAwesomeIcon width="0" icon={faGithub} />
           </a>
         </div>
       </header>
