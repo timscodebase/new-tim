@@ -8,12 +8,12 @@ import styles from '../styles/Post.module.css'
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css'
 
 const StyledPostLink = styled.div`
+  display: grid;
   flex: 1 1 195px;
   padding: 1rem;
   background: var(--transtodarkblue), url(${props => props.image});
   background-size: cover;
   margin-bottom: 5px;
-  display: flex;
   flex-direction: column;
   margin-top: 1rem;
   justify-content: space-between;

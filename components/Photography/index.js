@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 
-import Feed from 'react-instagram-authless-feed'
+// import Feed from 'react-instagram-authless-feed'yarn
 import ImageComponent from '../ImageComponent'
 import Separator from '../Separator'
 
@@ -16,9 +16,9 @@ export default function Photography({ cloudinaryImages }) {
           <ImageComponent key={image.public_id} {...image} />
         ))}
       </div>
-      <Separator fullBleed />
+      {/* <Separator fullBleed />
       <h2 className={styles.h2}>Instagram Snaps</h2>
-      {/* <Feed
+      <Feed
         userName="tithos"
         className={styles.gramz}
         classNameLoading="Loading"

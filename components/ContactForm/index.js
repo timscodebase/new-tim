@@ -37,6 +37,7 @@ class ContactForm extends React.Component {
             <label className={styles.label} htmlFor="name">
               <p hidden>Your Name:</p>
               <input
+                id="name"
                 className={styles.input}
                 type="text"
                 name="name"
@@ -53,6 +54,7 @@ class ContactForm extends React.Component {
             >
               <p hidden>Your Email:</p>
               <input
+                id="email"
                 className={styles.input}
                 type="email"
                 name="email"
@@ -69,6 +71,7 @@ class ContactForm extends React.Component {
             >
               <p hidden>Message:</p>
               <textarea
+                id="message"
                 className={styles.textarea}
                 name="message"
                 value={message}

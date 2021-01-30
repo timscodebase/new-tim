@@ -7,18 +7,30 @@ import SecondaryHeader from '../components/SecondaryHeader'
 import Separator from '../components/Separator'
 
 import '../styles/globals.css'
+import Head from 'next/head'
 
 function Tim({ Component, pageProps, apollo }) {
   return (
-    <ApolloProvider client={apollo}>
-      <div className="bodyWrapper">
-        <SecondaryHeader />
-        <Nav />
-        <Separator />
-        <Component {...pageProps} />
-        <Footer />
-      </div>
-    </ApolloProvider>
+    <>
+      <Head>
+        <meta charSet="UTF-8" />
+        <title>Tim Smith</title>
+        <meta name="keywords" content="HTML, CSS, JavaScript, Photography" />
+        <meta
+          name="description"
+          content="I am a web developer, but also a lot more!"
+        />
+      </Head>
+      <ApolloProvider client={apollo}>
+        <div className="bodyWrapper">
+          <SecondaryHeader />
+          <Nav />
+          <Separator />
+          <Component {...pageProps} />
+          <Footer />
+        </div>
+      </ApolloProvider>
+    </>
   )
 }
 

@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import Head from 'next/head'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCodepen, faDev, faGithub } from '@fortawesome/free-brands-svg-icons'
 import Separator from '../Separator'
@@ -9,15 +8,6 @@ import styles from './Header.module.css'
 export default function Header() {
   return (
     <>
-      <Head>
-        <meta charSet="UTF-8" />
-        <title>Tim Smith</title>
-        <meta name="keywords" content="HTML, CSS, JavaScript, Photography" />
-        <meta
-          name="description"
-          content="I am a web developer, but also a lot more!"
-        />
-      </Head>
       <header className={styles.header}>
         <Link href="/">
           <a>
