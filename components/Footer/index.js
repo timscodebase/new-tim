@@ -31,6 +31,7 @@ export default function Footer() {
           </div>
           <div className={styles.socialLinks}>
             <a
+              aria-label="facebook"
               href="https://www.facebook.com/tim.smith/"
               target="_blank"
               rel="noreferrer noopener"
@@ -38,6 +39,7 @@ export default function Footer() {
               <FontAwesomeIcon icon={faFacebook} />
             </a>
             <a
+              aria-label="twitter"
               href="https://twitter.com/timsmith23"
               target="_blank"
               rel="noreferrer noopener"
@@ -45,6 +47,7 @@ export default function Footer() {
               <FontAwesomeIcon icon={faTwitter} />
             </a>
             <a
+              aria-label="instagram"
               href="https://www.instagram.com/tithos/"
               target="_blank"
               rel="noreferrer noopener"
@@ -52,6 +55,7 @@ export default function Footer() {
               <FontAwesomeIcon icon={faInstagram} />
             </a>
             <a
+              aria-label="dev"
               href="https://dev.to/tithos"
               target="_blank"
               rel="noreferrer noopener"
@@ -59,6 +63,7 @@ export default function Footer() {
               <FontAwesomeIcon icon={faDev} />
             </a>
             <a
+              aria-label="github"
               href="https://github.com/timscodebase"
               target="_blank"
               rel="noreferrer noopener"
@@ -66,6 +71,7 @@ export default function Footer() {
               <FontAwesomeIcon icon={faGithub} />
             </a>
             <a
+              aria-label="codepen"
               href="https://codepen.io/WebRuin"
               target="_blank"
               rel="noreferrer noopener"

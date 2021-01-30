@@ -24,24 +24,30 @@ export default function Header() {
         </div>
         <div className={styles.socialIcons}>
           <a
+            aria-label="codepen"
             href="https://codepen.io/WebRuin"
             target="_blank"
             rel="noreferrer noopener"
           >
+            codepen
             <FontAwesomeIcon icon={faCodepen} />
           </a>
           <a
+            aria-label="dev"
             href="https://dev.to/tithos"
             target="_blank"
             rel="noreferrer noopener"
           >
+            dev
             <FontAwesomeIcon icon={faDev} />
           </a>
           <a
+            aria-label="github"
             href="https://github.com/timscodebase"
             target="_blank"
             rel="noreferrer noopener"
           >
+            github
             <FontAwesomeIcon icon={faGithub} />
           </a>
         </div>

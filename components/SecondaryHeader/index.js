@@ -26,6 +26,7 @@ export default function SecondaryHeader() {
         </section>
         <div className={styles.socialIcons}>
           <a
+            aria-label="codepen"
             href="https://codepen.io/WebRuin"
             target="_blank"
             rel="noreferrer noopener"
@@ -33,6 +34,7 @@ export default function SecondaryHeader() {
             <FontAwesomeIcon icon={faCodepen} />
           </a>
           <a
+            aria-label="dev"
             href="https://dev.to/tithos"
             target="_blank"
             rel="noreferrer noopener"
@@ -40,6 +42,7 @@ export default function SecondaryHeader() {
             <FontAwesomeIcon icon={faDev} />
           </a>
           <a
+            aria-label="github"
             href="https://github.com/timscodebase"
             target="_blank"
             rel="noreferrer noopener"
