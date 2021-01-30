@@ -39,6 +39,7 @@
     "react-swipeable": "^6.0.1",
     "sitemap": "^6.3.5",
     "styled-components": "^5.2.1",
+    "swr": "^0.4.1",
     "url-loader": "^4.1.1"
   },
   "devDependencies": {

@@ -1,14 +1,15 @@
+import useSWR from 'swr'
 import PropTypes from 'prop-types'
 import Photography from '../components/Photography'
 
-export default function PhotographyPage({ cloudinaryImages }) {
-  return <Photography cloudinaryImages={cloudinaryImages} />
-}
+const fetcher = url => fetch(url).then(res => res.json())
+export default function PhotographyPage() {
+  const { data, error } = useSWR('/api/photos', fetcher)
 
-export async function getServerSideProps({ query }) {
-  const cloudinaryImages = query.resources
+  if (error) return <div>Failed to load</div>
+  if (!data) return <div>Loading...</div>
 
-  return { props: { cloudinaryImages } }
+  if (data) return <Photography cloudinaryImages={data.resources} />
 }
 
 PhotographyPage.propTypes = {

@@ -7,6 +7,7 @@ import Separator from '../Separator'
 import styles from './Photography.module.css'
 
 export default function Photography({ cloudinaryImages }) {
+  console.log(cloudinaryImages)
   return (
     <div className={styles.photographyWrapper}>
       <h1>Photography</h1>
