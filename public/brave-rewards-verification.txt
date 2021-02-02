@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: timsmith.tech
+Token: df391b0203ed54f92dbedc5839d9604f2ae51227a1e0aa426462646b4583c765
